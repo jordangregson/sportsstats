@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="mlb-standings.js"></script>
-    <script src="date.js"></script>
+    <script src="js/mlb-standings.js"></script>
+    
     <title>Sports Stats - MLB Standings</title>
 </head>
 <header>
@@ -19,8 +19,8 @@
         </div>
 
         <div id="date">
-            <h3 class="display-date">Month, 00, 0000</h3>
-            <h3 class="display-time">00:00 AM</h3>
+            <h4 id="display-date">January 1st, 2020</h4>
+            <h3 id="display-time">00:00 AM</h3>
         </div>
 
     </span>
@@ -35,302 +35,304 @@
 </header>
 
 
-<div id="standings-grid-cont">
-
-    <div class="AL league-grid-item">
-        <h1 id="AL-display">American League</h1>
-
-        <div id="division-grid-cont">
-            <div class="division-grid-item"><p id="west">West</p>
-                <div id="west-cont">
-                    <div id="standing-details">
-                        <h5>#</h5>
-                        <h5>Team Name</h5>
-                        <h5>Wins</h5>
-                        <h5>Losses</h5>
-                    </div>
-                    <div class="team-details ">
-                        <h4>1</h4>
-                        <h4 id="1st-alw-name">Team</h4>
-                        <h4 id="1st-alw-wins">Wins</h4>
-                        <h4 id="1st-alw-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>2</h4>
-                        <h4 id="2nd-alw-name">Team</h4>
-                        <h4 id="2nd-alw-wins">Wins</h4>
-                        <h4 id="2nd-alw-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>3</h4>
-                        <h4 id="3rd-alw-name">Team</h4>
-                        <h4 id="3rd-alw-wins">Wins</h4>
-                        <h4 id="3rd-alw-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>4</h4>
-                        <h4 id="4th-alw-name">Team</h4>
-                        <h4 id="4th-alw-wins">Wins</h4>
-                        <h4 id="4th-alw-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-al">
-                        <h4>5</h4>
-                        <h4 id="5th-alw-name">Team</h4>
-                        <h4 id="5th-alw-wins">Wins</h4>
-                        <h4 id="5th-alw-losses">Losses</h4>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="division-grid-item"><p id="central">Central</p>
-                <div id="west-cont">
-                    <div id="standing-details">
-                        <h5>#</h5>
-                        <h5>Team Name</h5>
-                        <h5>Wins</h5>
-                        <h5>Losses</h5>
-                    </div>
-                    <div class="team-details ">
-                        <h4>1</h4>
-                        <h4 id="1st-alc-name">Team</h4>
-                        <h4 id="1st-alc-wins">Wins</h4>
-                        <h4 id="1st-alc-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>2</h4>
-                        <h4 id="2nd-alc-name">Team</h4>
-                        <h4 id="2nd-alc-wins">Wins</h4>
-                        <h4 id="2nd-alc-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>3</h4>
-                        <h4 id="3rd-alc-name">Team</h4>
-                        <h4 id="3rd-alc-wins">Wins</h4>
-                        <h4 id="3rd-alc-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>4</h4>
-                        <h4 id="4th-alc-name">Team</h4>
-                        <h4 id="4th-alc-wins">Wins</h4>
-                        <h4 id="4th-alc-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-al">
-                        <h4>5</h4>
-                        <h4 id="5th-alc-name">Team</h4>
-                        <h4 id="5th-alc-wins">Wins</h4>
-                        <h4 id="5th-alc-losses">Losses</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="division-grid-item"><p id="east">East</p>
-                <div id="west-cont">
-                    <div id="standing-details">
-                        <h5>#</h5>
-                        <h5>Team Name</h5>
-                        <h5>Wins</h5>
-                        <h5>Losses</h5>
-                    </div>
-                    <div class="team-details ">
-                        <h4>1</h4>
-                        <h4 id="1st-ale-name">Team</h4>
-                        <h4 id="1st-ale-wins">Wins</h4>
-                        <h4 id="1st-ale-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>2</h4>
-                        <h4 id="2nd-ale-name">Team</h4>
-                        <h4 id="2nd-ale-wins">Wins</h4>
-                        <h4 id="2nd-ale-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>3</h4>
-                        <h4 id="3rd-ale-name">Team</h4>
-                        <h4 id="3rd-ale-wins">Wins</h4>
-                        <h4 id="3rd-ale-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>4</h4>
-                        <h4 id="4th-ale-name">Team</h4>
-                        <h4 id="4th-ale-wins">Wins</h4>
-                        <h4 id="4th-ale-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-al">
-                        <h4>5</h4>
-                        <h4 id="5th-ale-name">Team</h4>
-                        <h4 id="5th-ale-wins">Wins</h4>
-                        <h4 id="5th-ale-losses">Losses</h4>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="NL league-grid-item">
-        <h1 id="NL-display">National League</h1>
-
-        <div id="division-grid-cont">
-            <div class="division-grid-item"><p id="west">West</p>
-                <div id="west-cont">
-                    <div id="standing-details">
-                        <h5>#</h5>
-                        <h5>Team Name</h5>
-                        <h5>Wins</h5>
-                        <h5>Losses</h5>
-                    </div>
-                    <div class="team-details ">
-                        <h4>1</h4>
-                        <h4 id="1st-nlw-name">Team</h4>
-                        <h4 id="1st-nlw-wins">Wins</h4>
-                        <h4 id="1st-nlw-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>2</h4>
-                        <h4 id="2nd-nlw-name">Team</h4>
-                        <h4 id="2nd-nlw-wins">Wins</h4>
-                        <h4 id="2nd-nlw-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>3</h4>
-                        <h4 id="3rd-nlw-name">Team</h4>
-                        <h4 id="3rd-nlw-wins">Wins</h4>
-                        <h4 id="3rd-nlw-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>4</h4>
-                        <h4 id="4th-nlw-name">Team</h4>
-                        <h4 id="4th-nlw-wins">Wins</h4>
-                        <h4 id="4th-nlw-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-al">
-                        <h4>5</h4>
-                        <h4 id="5th-nlw-name">Team</h4>
-                        <h4 id="5th-nlw-wins">Wins</h4>
-                        <h4 id="5th-nlw-losses">Losses</h4>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="division-grid-item"><p id="central">Central</p>
-                <div id="west-cont">
-                    <div id="standing-details">
-                        <h5>#</h5>
-                        <h5>Team Name</h5>
-                        <h5>Wins</h5>
-                        <h5>Losses</h5>
-                    </div>
-                    <div class="team-details ">
-                        <h4>1</h4>
-                        <h4 id="1st-nlc-name">Team</h4>
-                        <h4 id="1st-nlc-wins">Wins</h4>
-                        <h4 id="1st-nlc-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>2</h4>
-                        <h4 id="2nd-nlc-name">Team</h4>
-                        <h4 id="2nd-nlc-wins">Wins</h4>
-                        <h4 id="2nd-nlc-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>3</h4>
-                        <h4 id="3rd-nlc-name">Team</h4>
-                        <h4 id="3rd-nlc-wins">Wins</h4>
-                        <h4 id="3rd-nlc-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>4</h4>
-                        <h4 id="4th-nlc-name">Team</h4>
-                        <h4 id="4th-nlc-wins">Wins</h4>
-                        <h4 id="4th-nlc-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-al">
-                        <h4>5</h4>
-                        <h4 id="5th-nlc-name">Team</h4>
-                        <h4 id="5th-nlc-wins">Wins</h4>
-                        <h4 id="5th-nlc-losses">Losses</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="division-grid-item"><p id="east">East</p>
-                <div id="west-cont">
-                    <div id="standing-details">
-                        <h5>#</h5>
-                        <h5>Team Name</h5>
-                        <h5>Wins</h5>
-                        <h5>Losses</h5>
-                    </div>
-                    <div class="team-details ">
-                        <h4>1</h4>
-                        <h4 id="1st-nle-name">Team</h4>
-                        <h4 id="1st-nle-wins">Wins</h4>
-                        <h4 id="1st-nle-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>2</h4>
-                        <h4 id="2nd-nle-name">Team</h4>
-                        <h4 id="2nd-nle-wins">Wins</h4>
-                        <h4 id="2nd-nle-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>3</h4>
-                        <h4 id="3rd-nle-name">Team</h4>
-                        <h4 id="3rd-nle-wins">Wins</h4>
-                        <h4 id="3rd-nle-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-alw">
-                        <h4>4</h4>
-                        <h4 id="4th-nle-name">Team</h4>
-                        <h4 id="4th-nle-wins">Wins</h4>
-                        <h4 id="4th-nle-losses">Losses</h4>
-                    </div>
-
-                    <div class="team-details first-place-al">
-                        <h4>5</h4>
-                        <h4 id="5th-nle-name">Team</h4>
-                        <h4 id="5th-nle-wins">Wins</h4>
-                        <h4 id="5th-nle-losses">Losses</h4>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    </div>
-
-</div>
 
 <body>
 
+    <div id="standings-grid-cont">
+
+        <div class="AL league-grid-item">
+            <h1 id="AL-display">American League</h1>
+    
+            <div id="division-grid-cont">
+                <div class="division-grid-item"><p id="west">West</p>
+                    <div id="west-cont">
+                        <div id="standing-details">
+                            <h5>#</h5>
+                            <h5>Team Name</h5>
+                            <h5>Wins</h5>
+                            <h5>Losses</h5>
+                        </div>
+                        <div class="team-details ">
+                            <h4>1</h4>
+                            <h4 id="1st-alw-name">Team</h4>
+                            <h4 id="1st-alw-wins">Wins</h4>
+                            <h4 id="1st-alw-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>2</h4>
+                            <h4 id="2nd-alw-name">Team</h4>
+                            <h4 id="2nd-alw-wins">Wins</h4>
+                            <h4 id="2nd-alw-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>3</h4>
+                            <h4 id="3rd-alw-name">Team</h4>
+                            <h4 id="3rd-alw-wins">Wins</h4>
+                            <h4 id="3rd-alw-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>4</h4>
+                            <h4 id="4th-alw-name">Team</h4>
+                            <h4 id="4th-alw-wins">Wins</h4>
+                            <h4 id="4th-alw-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-al">
+                            <h4>5</h4>
+                            <h4 id="5th-alw-name">Team</h4>
+                            <h4 id="5th-alw-wins">Wins</h4>
+                            <h4 id="5th-alw-losses">Losses</h4>
+                        </div>
+                        
+                    </div>
+                </div>
+    
+                <div class="division-grid-item"><p id="central">Central</p>
+                    <div id="west-cont">
+                        <div id="standing-details">
+                            <h5>#</h5>
+                            <h5>Team Name</h5>
+                            <h5>Wins</h5>
+                            <h5>Losses</h5>
+                        </div>
+                        <div class="team-details ">
+                            <h4>1</h4>
+                            <h4 id="1st-alc-name">Team</h4>
+                            <h4 id="1st-alc-wins">Wins</h4>
+                            <h4 id="1st-alc-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>2</h4>
+                            <h4 id="2nd-alc-name">Team</h4>
+                            <h4 id="2nd-alc-wins">Wins</h4>
+                            <h4 id="2nd-alc-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>3</h4>
+                            <h4 id="3rd-alc-name">Team</h4>
+                            <h4 id="3rd-alc-wins">Wins</h4>
+                            <h4 id="3rd-alc-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>4</h4>
+                            <h4 id="4th-alc-name">Team</h4>
+                            <h4 id="4th-alc-wins">Wins</h4>
+                            <h4 id="4th-alc-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-al">
+                            <h4>5</h4>
+                            <h4 id="5th-alc-name">Team</h4>
+                            <h4 id="5th-alc-wins">Wins</h4>
+                            <h4 id="5th-alc-losses">Losses</h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="division-grid-item"><p id="east">East</p>
+                    <div id="west-cont">
+                        <div id="standing-details">
+                            <h5>#</h5>
+                            <h5>Team Name</h5>
+                            <h5>Wins</h5>
+                            <h5>Losses</h5>
+                        </div>
+                        <div class="team-details ">
+                            <h4>1</h4>
+                            <h4 id="1st-ale-name">Team</h4>
+                            <h4 id="1st-ale-wins">Wins</h4>
+                            <h4 id="1st-ale-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>2</h4>
+                            <h4 id="2nd-ale-name">Team</h4>
+                            <h4 id="2nd-ale-wins">Wins</h4>
+                            <h4 id="2nd-ale-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>3</h4>
+                            <h4 id="3rd-ale-name">Team</h4>
+                            <h4 id="3rd-ale-wins">Wins</h4>
+                            <h4 id="3rd-ale-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>4</h4>
+                            <h4 id="4th-ale-name">Team</h4>
+                            <h4 id="4th-ale-wins">Wins</h4>
+                            <h4 id="4th-ale-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-al">
+                            <h4>5</h4>
+                            <h4 id="5th-ale-name">Team</h4>
+                            <h4 id="5th-ale-wins">Wins</h4>
+                            <h4 id="5th-ale-losses">Losses</h4>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="NL league-grid-item">
+            <h1 id="NL-display">National League</h1>
+    
+            <div id="division-grid-cont">
+                <div class="division-grid-item"><p id="west">West</p>
+                    <div id="west-cont">
+                        <div id="standing-details">
+                            <h5>#</h5>
+                            <h5>Team Name</h5>
+                            <h5>Wins</h5>
+                            <h5>Losses</h5>
+                        </div>
+                        <div class="team-details ">
+                            <h4>1</h4>
+                            <h4 id="1st-nlw-name">Team</h4>
+                            <h4 id="1st-nlw-wins">Wins</h4>
+                            <h4 id="1st-nlw-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>2</h4>
+                            <h4 id="2nd-nlw-name">Team</h4>
+                            <h4 id="2nd-nlw-wins">Wins</h4>
+                            <h4 id="2nd-nlw-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>3</h4>
+                            <h4 id="3rd-nlw-name">Team</h4>
+                            <h4 id="3rd-nlw-wins">Wins</h4>
+                            <h4 id="3rd-nlw-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>4</h4>
+                            <h4 id="4th-nlw-name">Team</h4>
+                            <h4 id="4th-nlw-wins">Wins</h4>
+                            <h4 id="4th-nlw-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-al">
+                            <h4>5</h4>
+                            <h4 id="5th-nlw-name">Team</h4>
+                            <h4 id="5th-nlw-wins">Wins</h4>
+                            <h4 id="5th-nlw-losses">Losses</h4>
+                        </div>
+                        
+                    </div>
+                </div>
+    
+                <div class="division-grid-item"><p id="central">Central</p>
+                    <div id="west-cont">
+                        <div id="standing-details">
+                            <h5>#</h5>
+                            <h5>Team Name</h5>
+                            <h5>Wins</h5>
+                            <h5>Losses</h5>
+                        </div>
+                        <div class="team-details ">
+                            <h4>1</h4>
+                            <h4 id="1st-nlc-name">Team</h4>
+                            <h4 id="1st-nlc-wins">Wins</h4>
+                            <h4 id="1st-nlc-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>2</h4>
+                            <h4 id="2nd-nlc-name">Team</h4>
+                            <h4 id="2nd-nlc-wins">Wins</h4>
+                            <h4 id="2nd-nlc-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>3</h4>
+                            <h4 id="3rd-nlc-name">Team</h4>
+                            <h4 id="3rd-nlc-wins">Wins</h4>
+                            <h4 id="3rd-nlc-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>4</h4>
+                            <h4 id="4th-nlc-name">Team</h4>
+                            <h4 id="4th-nlc-wins">Wins</h4>
+                            <h4 id="4th-nlc-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-al">
+                            <h4>5</h4>
+                            <h4 id="5th-nlc-name">Team</h4>
+                            <h4 id="5th-nlc-wins">Wins</h4>
+                            <h4 id="5th-nlc-losses">Losses</h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="division-grid-item"><p id="east">East</p>
+                    <div id="west-cont">
+                        <div id="standing-details">
+                            <h5>#</h5>
+                            <h5>Team Name</h5>
+                            <h5>Wins</h5>
+                            <h5>Losses</h5>
+                        </div>
+                        <div class="team-details ">
+                            <h4>1</h4>
+                            <h4 id="1st-nle-name">Team</h4>
+                            <h4 id="1st-nle-wins">Wins</h4>
+                            <h4 id="1st-nle-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>2</h4>
+                            <h4 id="2nd-nle-name">Team</h4>
+                            <h4 id="2nd-nle-wins">Wins</h4>
+                            <h4 id="2nd-nle-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>3</h4>
+                            <h4 id="3rd-nle-name">Team</h4>
+                            <h4 id="3rd-nle-wins">Wins</h4>
+                            <h4 id="3rd-nle-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-alw">
+                            <h4>4</h4>
+                            <h4 id="4th-nle-name">Team</h4>
+                            <h4 id="4th-nle-wins">Wins</h4>
+                            <h4 id="4th-nle-losses">Losses</h4>
+                        </div>
+    
+                        <div class="team-details first-place-al">
+                            <h4>5</h4>
+                            <h4 id="5th-nle-name">Team</h4>
+                            <h4 id="5th-nle-wins">Wins</h4>
+                            <h4 id="5th-nle-losses">Losses</h4>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+    
+        </div>
+    
+    </div>
+    
+
 </body>
+
+<script src="js/date.js"></script>
 
 </html>

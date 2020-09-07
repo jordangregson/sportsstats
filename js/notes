@@ -1,0 +1,14 @@
+console.log(data);
+
+        var firstAlcNameData = data[0].Name;
+        var firstALCName = document.getElementById("1st-alc-name");
+        firstALCName.textContent = firstAlcNameData;
+
+
+        var firstALCWinsData = data[0].Wins;
+        var firstALCWins = document.getElementById("1st-alc-wins")
+        firstALCWins.textContent = firstALCWinsData;
+
+        var firstALCLossesData = data[0].Wins;
+        var firstALCLosses = document.getElementById("1st-alc-losses")
+        firstALCLosses.textContent = firstALCLossesData;

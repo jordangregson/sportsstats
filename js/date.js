@@ -5,38 +5,7 @@ var numDayOfWeek = today.getDay();
 var numMonth = today.getMonth();
 var year = today.getFullYear();
 
-var dayOfWeek;
 var month;
-
-//Setting the number of the day throughout the week to the corresponding day
-
-if(numDayOfWeek == 0) {
-    dayOfWeek = "Sunday";
-}
-
-else if(numDayOfWeek == 1) {
-    dayOfWeek = "Monday";
-}
-
-else if(numDayOfWeek == 2) {
-    dayOfWeek = "Tuesday";
-}
-
-else if(numDayOfWeek == 3) {
-    dayOfWeek = "Wednesday";
-}
-
-else if(numDayOfWeek == 4) {
-    dayOfWeek = "Thursday";
-}
-
-else if(numDayOfWeek == 5) {
-    dayOfWeek = "Friday";
-}
-
-else if(numDayOfWeek == 6) {
-    dayOfWeek = "Saturday";
-}
 
 //Setting the number of month to the corresponding month
 
@@ -88,6 +57,6 @@ else if(numMonth == 11) {
     month = "December";
 }
 
-var elFullDate = document.getElementById("date");
+var fullData = document.getElementById("display-date");
 
-elFullDate.textContent = dayOfWeek + " " + month + " " + date + ", " + year;
+fullData.textContent = month + " " + date + ", " + year;

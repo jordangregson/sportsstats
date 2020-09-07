@@ -39,7 +39,7 @@ header {
 
 
 
-.display-time, .display-date {
+#display-time, #display-date {
     text-align: center;
     font-size: 15pt;
 
