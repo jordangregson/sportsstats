@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+/*Navigation Bar*/
+
+header {
+    background-color: #6CA86E;
+    color: white;
+}
+
+#logo-title-date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 30pt;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#page-logo {
+    width: auto;
+    height: 5vw;
+}
+
+#current-page {
+    display: flex;
+    padding-top: 10px;
+}
+
+.page-title {
+    font-size: 2vw;
+    text-align: center;
+}
+
+
+
+.display-time, .display-date {
+    text-align: center;
+    font-size: 15pt;
+
+    padding-top: 10px;
+    padding-right: 30px;
+}
+
+nav {
+    justify-content: space-around;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nav-items {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+/*Content*/
+
+#standings-grid-cont {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4);
+
+    
+}
+
+.AL, .NL {
+    margin-top: 40px;
+}
+
+.league-grid-item {
+    border: 2px solid black;
+    
+}
+
+#AL-display, #NL-display {
+    text-align: center;
+}
+
+#west, #east, #central {
+    text-align: center;
+}
+
+.division-grid-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#division-grid-cont {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#west-cont, #central-cont, #east-cont {
+    width: 30vw;
+    border: 2px solid black;
+}
+
+#standing-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+
