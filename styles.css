@@ -1,13 +1,18 @@
 * {
     padding: 0;
     margin: 0;
-    
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Navigation Bar*/
 
 header {
     background-color: #6CA86E;
+    color: white;
+}
+
+a {
+    text-decoration: none;
     color: white;
 }
 
@@ -63,6 +68,7 @@ nav {
 
 .nav-items {
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 .navbar li {
@@ -84,16 +90,18 @@ nav {
 }
 
 .league-grid-item {
-    border: 2px solid black;
+    
     
 }
 
 #AL-display, #NL-display {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #west, #east, #central {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .division-grid-item {
@@ -109,7 +117,7 @@ nav {
 
 #west-cont, #central-cont, #east-cont {
     width: 30vw;
-    border: 2px solid black;
+    
 }
 
 #standing-details {
@@ -122,4 +130,11 @@ nav {
     justify-content: space-between;
 }
 
+h4 {
+    line-height: 35px;
+}
+
+body {
+    margin-bottom: 50px;
+}
 
