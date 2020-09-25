@@ -1,0 +1,61 @@
+header {
+    background-color: #6CA86E;
+    color: white;
+}
+
+#standings-grid-cont {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4);
+
+    
+}
+
+.AL, .NL {
+    margin-top: 40px;
+}
+
+#AL-display, #NL-display {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#west, #east, #central {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.division-grid-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#division-grid-cont {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#west-cont, #central-cont, #east-cont {
+    width: 30vw;
+    
+}
+
+#standing-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+h4 {
+    line-height: 35px;
+}
+
+body {
+    margin-bottom: 50px;
+}
+

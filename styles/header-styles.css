@@ -4,11 +4,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*Navigation Bar*/
-
 header {
-    background-color: #6CA86E;
-    color: white;
+    height: 120px;
+    width: 100vw;
 }
 
 a {
@@ -62,79 +60,35 @@ nav {
     justify-content: space-around;
     width: 40%;
 
-    padding-top: 15px;
+    padding-top: 5px;
     padding-bottom: 15px;
 }
 
 .nav-items {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
+    text-align: center;
 }
 
 .navbar li {
     list-style: none;
 }
 
-/*Content*/
-
-#standings-grid-cont {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(4);
-
+@media (max-width: 644px) {
+    header {
+        height: 20vw;
+        max-width: 100%;
+    }
     
-}
+    .logo {
+        font-size: 5vw;
+    }
 
-.AL, .NL {
-    margin-top: 40px;
-}
-
-.league-grid-item {
+    #display-time, #display-date {
+        text-align: center;
+        font-size: 4vw;
     
-    
+        padding-top: 10px;
+        padding-right: 30px;
+    }
 }
-
-#AL-display, #NL-display {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#west, #east, #central {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.division-grid-item {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-#division-grid-cont {
-    display: flex;
-    justify-content: space-around;
-    
-}
-
-#west-cont, #central-cont, #east-cont {
-    width: 30vw;
-    
-}
-
-#standing-details {
-    display: flex;
-    justify-content: space-between;
-}
-
-.team-details {
-    display: flex;
-    justify-content: space-between;
-}
-
-h4 {
-    line-height: 35px;
-}
-
-body {
-    margin-bottom: 50px;
-}
-
